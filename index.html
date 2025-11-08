@@ -15,157 +15,566 @@
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to main content</a>
+    
+    <div class="status-banner" role="status" aria-live="polite">
+      <div class="container">
+        <div class="banner-content">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" class="banner-icon">
+            <circle cx="12" cy="12" r="10" stroke="#0b3d91" stroke-width="2"/>
+            <path d="M12 6v6l4 2" stroke="#0b3d91" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          <span class="status-text"><strong>Pre-release:</strong> CivicLens is under active development.</span>
+        </div>
+      </div>
+    </div>
+
     <header class="site-header" role="banner">
       <div class="container header-inner">
         <a class="brand" href="./" aria-label="CivicLens home">
-          <img class="brand-mark" src="assets/civiclens-mark.svg" alt="" width="28" height="28">
+          <img class="brand-mark" src="assets/civiclens-mark.svg" alt="" width="32" height="32">
           <span class="brand-text">CivicLens</span>
         </a>
-        <nav class="site-nav" aria-label="Primary">
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="site-nav">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav class="site-nav" id="site-nav" aria-label="Primary">
           <a href="#features">Features</a>
           <a href="#how-it-works">How it works</a>
+          <a href="#impact">Impact</a>
           <a href="#contact">Contact</a>
         </nav>
       </div>
     </header>
 
-    <div class="status-banner" role="status" aria-live="polite">
-      <div class="container">
-        <span class="badge">Coming soon</span>
-        <span class="status-text">CivicLens is under active development. Pre‑release concept.</span>
-      </div>
-    </div>
-
     <main id="main" tabindex="-1">
+      <!-- Hero Section -->
       <section class="hero">
-        <div class="container hero-inner">
-          <span class="eyebrow">Public infrastructure transparency</span>
-          <h1 class="hero-title">Transparent public infrastructure, verified for everyone</h1>
-          <p class="hero-subtitle">
-            Track budgets, milestones, contractors, and real-world progress—with tamper‑evident records anchored on a public blockchain. This is a pre‑release preview while we build the platform.
-          </p>
-          <div class="hero-cta">
-            <a class="btn btn-primary" href="#features">Explore features</a>
-            <a class="btn btn-ghost" href="docs/Project-Brief.md">Read the brief</a>
-          </div>
+        <div class="hero-bg">
+          <div class="hero-grid"></div>
         </div>
-      </section>
+        <div class="container">
+          <div class="hero-content">
+            <div class="hero-badge">
+              <span class="badge-dot"></span>
+              <span>Public Infrastructure Transparency Platform</span>
+            </div>
+            <h1 class="hero-title">
+              Making public spending 
+              <span class="title-highlight">transparent</span>,
+              <span class="title-highlight">verifiable</span>, and
+              <span class="title-highlight">accountable</span>
+            </h1>
+            <p class="hero-lead">
+              Track every dollar, milestone, and contractor with blockchain-anchored records 
+              that citizens, journalists, and officials can trust.
+            </p>
+             <div class="hero-actions">
+               <a href="docs/Project-Brief.md" class="btn btn-primary">
+                 <span>Explore the platform</span>
+                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                   <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                 </svg>
+               </a>
+               <a href="#features" class="btn btn-secondary">
+                 <span>See features</span>
+               </a>
+             </div>
+           </div>
+        </div>
+        <div class="hero-bottom-shapes" aria-hidden="true">
+          <svg width="100%" height="700" viewBox="0 0 1200 700" fill="none" preserveAspectRatio="none">
+            <!-- Building 1 - Low rise with windows -->
+            <rect x="0" y="500" width="120" height="200" fill="#0b3d91" opacity="0.04"/>
+            <rect x="15" y="520" width="20" height="25" fill="#0b3d91" opacity="0.07"/>
+            <rect x="45" y="520" width="20" height="25" fill="#0b3d91" opacity="0.07"/>
+            <rect x="75" y="520" width="20" height="25" fill="#0b3d91" opacity="0.07"/>
+            <rect x="15" y="560" width="20" height="25" fill="#0b3d91" opacity="0.07"/>
+            <rect x="45" y="560" width="20" height="25" fill="#0b3d91" opacity="0.07"/>
+            <rect x="75" y="560" width="20" height="25" fill="#0b3d91" opacity="0.07"/>
+            
+            <!-- Building 2 - Mid-rise with windows -->
+            <rect x="151" y="300" width="100" height="400" fill="#0b3d91" opacity="0.05"/>
+            <rect x="166" y="330" width="18" height="22" fill="#0b3d91" opacity="0.07"/>
+            <rect x="191" y="330" width="18" height="22" fill="#0b3d91" opacity="0.07"/>
+            <rect x="216" y="330" width="18" height="22" fill="#0b3d91" opacity="0.07"/>
+            <rect x="166" y="370" width="18" height="22" fill="#0b3d91" opacity="0.07"/>
+            <rect x="191" y="370" width="18" height="22" fill="#0b3d91" opacity="0.07"/>
+            <rect x="216" y="370" width="18" height="22" fill="#0b3d91" opacity="0.07"/>
+            <rect x="166" y="410" width="18" height="22" fill="#0b3d91" opacity="0.07"/>
+            <rect x="191" y="410" width="18" height="22" fill="#0b3d91" opacity="0.07"/>
+            <rect x="216" y="410" width="18" height="22" fill="#0b3d91" opacity="0.07"/>
+            
+            <!-- Bridge structure -->
+            <rect x="282" y="450" width="110" height="250" fill="#0b3d91" opacity="0.04"/>
+            <line x1="282" y1="500" x2="392" y2="500" stroke="#0b3d91" stroke-width="3" opacity="0.08"/>
+            <line x1="282" y1="550" x2="392" y2="550" stroke="#0b3d91" stroke-width="2" opacity="0.08"/>
+            <line x1="282" y1="600" x2="392" y2="600" stroke="#0b3d91" stroke-width="2" opacity="0.08"/>
+            <circle cx="312" cy="480" r="8" fill="#0b3d91" opacity="0.07"/>
+            <circle cx="362" cy="480" r="8" fill="#0b3d91" opacity="0.07"/>
+            
+            <!-- Tall building with windows -->
+            <rect x="423" y="200" width="95" height="500" fill="#0b3d91" opacity="0.06"/>
+            <rect x="438" y="240" width="16" height="20" fill="#0b3d91" opacity="0.07"/>
+            <rect x="463" y="240" width="16" height="20" fill="#0b3d91" opacity="0.07"/>
+            <rect x="488" y="240" width="16" height="20" fill="#0b3d91" opacity="0.07"/>
+            <rect x="438" y="280" width="16" height="20" fill="#0b3d91" opacity="0.07"/>
+            <rect x="463" y="280" width="16" height="20" fill="#0b3d91" opacity="0.07"/>
+            <rect x="488" y="280" width="16" height="20" fill="#0b3d91" opacity="0.07"/>
+            <rect x="438" y="320" width="16" height="20" fill="#0b3d91" opacity="0.07"/>
+            <rect x="463" y="320" width="16" height="20" fill="#0b3d91" opacity="0.07"/>
+            <rect x="488" y="320" width="16" height="20" fill="#0b3d91" opacity="0.07"/>
+            <rect x="438" y="360" width="16" height="20" fill="#0b3d91" opacity="0.07"/>
+            <rect x="463" y="360" width="16" height="20" fill="#0b3d91" opacity="0.07"/>
+            <rect x="488" y="360" width="16" height="20" fill="#0b3d91" opacity="0.07"/>
+            
+            <!-- Infrastructure tower/pole -->
+            <rect x="549" y="350" width="105" height="350" fill="#0b3d91" opacity="0.05"/>
+            <line x1="601" y1="350" x2="601" y2="700" stroke="#0b3d91" stroke-width="2" opacity="0.08"/>
+            <circle cx="601" cy="380" r="12" fill="#0b3d91" opacity="0.07"/>
+            <circle cx="601" cy="450" r="10" fill="#0b3d91" opacity="0.07"/>
+            <circle cx="601" cy="520" r="8" fill="#0b3d91" opacity="0.07"/>
+            <rect x="574" y="600" width="54" height="100" fill="#0b3d91" opacity="0.07"/>
+            
+            <!-- Skyscraper with multiple window rows -->
+            <rect x="685" y="300" width="115" height="400" fill="#0b3d91" opacity="0.05"/>
+            <rect x="705" y="340" width="20" height="24" fill="#0b3d91" opacity="0.07"/>
+            <rect x="735" y="340" width="20" height="24" fill="#0b3d91" opacity="0.07"/>
+            <rect x="765" y="340" width="20" height="24" fill="#0b3d91" opacity="0.07"/>
+            <rect x="705" y="380" width="20" height="24" fill="#0b3d91" opacity="0.07"/>
+            <rect x="735" y="380" width="20" height="24" fill="#0b3d91" opacity="0.07"/>
+            <rect x="765" y="380" width="20" height="24" fill="#0b3d91" opacity="0.07"/>
+            <rect x="705" y="420" width="20" height="24" fill="#0b3d91" opacity="0.07"/>
+            <rect x="735" y="420" width="20" height="24" fill="#0b3d91" opacity="0.07"/>
+            <rect x="765" y="420" width="20" height="24" fill="#0b3d91" opacity="0.07"/>
+            <rect x="705" y="460" width="20" height="24" fill="#0b3d91" opacity="0.07"/>
+            <rect x="735" y="460" width="20" height="24" fill="#0b3d91" opacity="0.07"/>
+            <rect x="765" y="460" width="20" height="24" fill="#0b3d91" opacity="0.07"/>
+            <rect x="705" y="500" width="20" height="24" fill="#0b3d91" opacity="0.07"/>
+            <rect x="735" y="500" width="20" height="24" fill="#0b3d91" opacity="0.07"/>
+            <rect x="765" y="500" width="20" height="24" fill="#0b3d91" opacity="0.07"/>
+            
+            <!-- Road/Highway structure -->
+            <rect x="831" y="400" width="100" height="300" fill="#0b3d91" opacity="0.06"/>
+            <line x1="831" y1="500" x2="931" y2="500" stroke="#ffb81c" stroke-width="4" opacity="0.08" stroke-dasharray="8,4"/>
+            <line x1="831" y1="550" x2="931" y2="550" stroke="#0b3d91" stroke-width="2" opacity="0.08"/>
+            <line x1="831" y1="600" x2="931" y2="600" stroke="#0b3d91" stroke-width="2" opacity="0.08"/>
+            <rect x="851" y="420" width="60" height="60" fill="#0b3d91" opacity="0.07"/>
+            <rect x="851" y="620" width="60" height="60" fill="#0b3d91" opacity="0.07"/>
+            
+            <!-- Industrial building with details -->
+            <rect x="962" y="150" width="110" height="550" fill="#0b3d91" opacity="0.05"/>
+            <rect x="971" y="190" width="25" height="30" fill="#0b3d91" opacity="0.07"/>
+            <rect x="1005" y="190" width="25" height="30" fill="#0b3d91" opacity="0.07"/>
+            <rect x="1039" y="190" width="25" height="30" fill="#0b3d91" opacity="0.07"/>
+            <rect x="971" y="240" width="25" height="30" fill="#0b3d91" opacity="0.07"/>
+            <rect x="1005" y="240" width="25" height="30" fill="#0b3d91" opacity="0.07"/>
+            <rect x="1039" y="240" width="25" height="30" fill="#0b3d91" opacity="0.07"/>
+            <rect x="971" y="290" width="25" height="30" fill="#0b3d91" opacity="0.07"/>
+            <rect x="1005" y="290" width="25" height="30" fill="#0b3d91" opacity="0.07"/>
+            <rect x="1039" y="290" width="25" height="30" fill="#0b3d91" opacity="0.07"/>
+            <rect x="971" y="340" width="25" height="30" fill="#0b3d91" opacity="0.07"/>
+            <rect x="1005" y="340" width="25" height="30" fill="#0b3d91" opacity="0.07"/>
+            <rect x="1039" y="340" width="25" height="30" fill="#0b3d91" opacity="0.07"/>
+            <rect x="971" y="390" width="25" height="30" fill="#0b3d91" opacity="0.07"/>
+            <rect x="1005" y="390" width="25" height="30" fill="#0b3d91" opacity="0.07"/>
+            <rect x="1039" y="390" width="25" height="30" fill="#0b3d91" opacity="0.07"/>
+            <line x1="962" y1="450" x2="1072" y2="450" stroke="#0b3d91" stroke-width="2" opacity="0.08"/>
+            <line x1="962" y1="500" x2="1072" y2="500" stroke="#0b3d91" stroke-width="2" opacity="0.08"/>
+            <line x1="962" y1="550" x2="1072" y2="550" stroke="#0b3d91" stroke-width="2" opacity="0.08"/>
+            <line x1="962" y1="600" x2="1072" y2="600" stroke="#0b3d91" stroke-width="2" opacity="0.08"/>
+            
+            <!-- Low infrastructure building -->
+            <rect x="1105" y="500" width="95" height="200" fill="#0b3d91" opacity="0.04"/>
+            <rect x="1120" y="530" width="22" height="28" fill="#0b3d91" opacity="0.07"/>
+            <rect x="1150" y="530" width="22" height="28" fill="#0b3d91" opacity="0.07"/>
+            <rect x="1180" y="530" width="22" height="28" fill="#0b3d91" opacity="0.07"/>
+            <rect x="1120" y="580" width="22" height="28" fill="#0b3d91" opacity="0.07"/>
+            <rect x="1150" y="580" width="22" height="28" fill="#0b3d91" opacity="0.07"/>
+            <rect x="1180" y="580" width="22" height="28" fill="#0b3d91" opacity="0.07"/>
+            <line x1="1105" y1="650" x2="1200" y2="650" stroke="#0b3d91" stroke-width="2" opacity="0.08"/>
+          </svg>
+        </div>
+       </section>
 
+       <!-- Stats Bar -->
+       <section class="hero-stats-section">
+         <div class="container">
+           <div class="hero-stats">
+             <div class="stat-card-hero">
+               <div class="stat-value">$0B</div>
+               <div class="stat-label">Infrastructure tracked</div>
+             </div>
+             <div class="stat-card-hero">
+               <div class="stat-value">0+</div>
+               <div class="stat-label">Projects monitored</div>
+             </div>
+             <div class="stat-card-hero">
+               <div class="stat-value">Beta</div>
+               <div class="stat-label">Platform status</div>
+             </div>
+           </div>
+         </div>
+       </section>
+
+      <!-- Features Section -->
       <section id="features" class="features section">
         <div class="container">
-          <h2 class="section-title">Built for transparency and accountability</h2>
-          <div class="feature-grid">
-            <article class="feature">
-              <div class="feature-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" width="24" height="24" fill="none"><circle cx="11" cy="11" r="6.5" stroke="#0b3d91" stroke-width="2"/><path d="M20 20l-3.5-3.5" stroke="#0b3d91" stroke-width="2" stroke-linecap="round"/></svg>
+          <div class="section-header">
+            <span class="section-label">Core capabilities</span>
+            <h2 class="section-title">Built for complete transparency</h2>
+            <p class="section-subtitle">Every feature designed to make public spending visible and verifiable</p>
+          </div>
+
+           <div class="features-grid">
+             <article class="feature-card feature-highlight">
+               <div class="feature-number">01</div>
+               <div class="feature-icon-large">
+                 <svg viewBox="0 0 64 64" fill="none">
+                   <rect x="8" y="16" width="48" height="40" rx="4" stroke="white" stroke-width="2.5"/>
+                   <line x1="18" y1="28" x2="46" y2="28" stroke="#ffb81c" stroke-width="2.5" stroke-linecap="round"/>
+                   <line x1="18" y1="36" x2="38" y2="36" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+                   <line x1="18" y1="44" x2="42" y2="44" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+                 </svg>
+               </div>
+               <h3 class="feature-title">Comprehensive Project Profiles</h3>
+               <p class="feature-description">
+                 Every infrastructure project gets a detailed profile with budgets, contractors, 
+                 timelines, milestones, and payment records—all in one centralized view.
+               </p>
+             </article>
+ 
+             <article class="feature-card feature-highlight">
+               <div class="feature-number">02</div>
+               <div class="feature-icon-large">
+                 <svg viewBox="0 0 64 64" fill="none">
+                   <circle cx="32" cy="26" r="18" stroke="white" stroke-width="2.5"/>
+                   <path d="M20 38L16 58l16-8 16 8-4-20" stroke="#ffb81c" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                   <path d="M26 26l4 4 8-8" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                 </svg>
+               </div>
+               <h3 class="feature-title">Blockchain Verification</h3>
+               <p class="feature-description">
+                 Critical documents and data are hashed and anchored on-chain, creating 
+                 tamper-evident records that anyone can verify.
+               </p>
+             </article>
+
+            <article class="feature-card">
+              <div class="feature-number">03</div>
+              <div class="feature-icon-large">
+                <svg viewBox="0 0 64 64" fill="none">
+                  <rect x="12" y="20" width="40" height="32" rx="2" stroke="#0b3d91" stroke-width="2.5"/>
+                  <circle cx="32" cy="32" r="6" stroke="#ffb81c" stroke-width="2.5"/>
+                  <path d="M32 38v8M26 46h12" stroke="#0b3d91" stroke-width="2.5" stroke-linecap="round"/>
+                </svg>
               </div>
-              <h3 class="feature-title">Clear project profiles</h3>
-              <p class="feature-text">Budgets, parties, milestones, payments, and documents—organized in one official view.</p>
+              <h3 class="feature-title">Real Evidence Upload</h3>
+              <p class="feature-description">
+                Citizens and officials can upload photos, documents, and reports to 
+                track actual progress versus claimed milestones.
+              </p>
             </article>
-            <article class="feature">
-              <div class="feature-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" width="24" height="24" fill="none"><path d="M4 12l4 4 12-12" stroke="#0b3d91" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+
+            <article class="feature-card">
+              <div class="feature-number">04</div>
+              <div class="feature-icon-large">
+                <svg viewBox="0 0 64 64" fill="none">
+                  <rect x="10" y="16" width="44" height="36" rx="2" stroke="#0b3d91" stroke-width="2.5"/>
+                  <path d="M18 28h28M18 36h20M18 44h24" stroke="#ffb81c" stroke-width="2.5" stroke-linecap="round"/>
+                  <circle cx="48" cy="18" r="8" fill="#0b3d91"/>
+                  <path d="M44 18l2 2 4-4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
               </div>
-              <h3 class="feature-title">Verifiable records</h3>
-              <p class="feature-text">Hashes of critical artifacts are anchored on-chain to make tampering detectable.</p>
-            </article>
-            <article class="feature">
-              <div class="feature-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" width="24" height="24" fill="none"><rect x="3" y="7" width="18" height="12" rx="2" stroke="#0b3d91" stroke-width="2"/><path d="M7 11h10M7 15h6" stroke="#0b3d91" stroke-width="2" stroke-linecap="round"/></svg>
-              </div>
-              <h3 class="feature-title">Evidence & oversight</h3>
-              <p class="feature-text">Attach photos and reports, compare planned vs. actual, and flag discrepancies.</p>
+              <h3 class="feature-title">Open API Access</h3>
+              <p class="feature-description">
+                Developers, journalists, and researchers can access structured data 
+                through a public API for analysis and integration.
+              </p>
             </article>
           </div>
         </div>
       </section>
 
-      <section class="stats section">
+      <!-- How It Works Section -->
+      <section id="how-it-works" class="process section">
         <div class="container">
-          <div class="kpis">
-            <div class="kpi">
-              <div class="kpi-number">0+</div>
-              <div class="kpi-label">Projects tracked</div>
+          <div class="section-header">
+            <span class="section-label">The process</span>
+            <h2 class="section-title">How CivicLens works</h2>
+          </div>
+
+          <div class="process-timeline">
+            <div class="timeline-item">
+              <div class="timeline-marker">
+                <div class="marker-outer">
+                  <div class="marker-inner"></div>
+                </div>
+                <div class="timeline-line"></div>
+              </div>
+              <div class="timeline-content">
+                <h3 class="timeline-title">Data Aggregation</h3>
+                <p class="timeline-text">
+                  We ingest official data from government databases, contract registries, 
+                  and public records—normalizing it into a consistent, searchable format.
+                </p>
+              </div>
             </div>
-            <div class="kpi">
-              <div class="kpi-number">0</div>
-              <div class="kpi-label">Agencies onboarded</div>
+
+            <div class="timeline-item">
+              <div class="timeline-marker">
+                <div class="marker-outer">
+                  <div class="marker-inner"></div>
+                </div>
+                <div class="timeline-line"></div>
+              </div>
+              <div class="timeline-content">
+                <h3 class="timeline-title">Blockchain Anchoring</h3>
+                <p class="timeline-text">
+                  Critical data and documents are hashed, and those hashes are permanently 
+                  recorded on a public blockchain for tamper-proof verification.
+                </p>
+              </div>
             </div>
-            <div class="kpi">
-              <div class="kpi-number">Beta</div>
-              <div class="kpi-label">Program status</div>
+
+            <div class="timeline-item">
+              <div class="timeline-marker">
+                <div class="marker-outer">
+                  <div class="marker-inner"></div>
+                </div>
+                <div class="timeline-line"></div>
+              </div>
+              <div class="timeline-content">
+                <h3 class="timeline-title">Public Access</h3>
+                <p class="timeline-text">
+                  Everyone gets a clear, searchable view of projects with real-time updates, 
+                  evidence uploads, and an open API for researchers and journalists.
+                </p>
+              </div>
             </div>
+
           </div>
         </div>
       </section>
 
+      <!-- Impact Section -->
+      <section id="impact" class="impact section">
+        <div class="container">
+          <div class="impact-grid">
+            <div class="impact-content">
+              <span class="section-label">Why it matters</span>
+              <h2 class="impact-title">Transparency drives accountability</h2>
+              <p class="impact-text">
+                Every year, billions of dollars flow into public infrastructure. Yet delays, 
+                cost overruns, and opacity remain endemic. CivicLens changes that by making 
+                every project, payment, and milestone visible—creating a permanent, verifiable 
+                record that empowers citizens and strengthens governance.
+              </p>
+              <ul class="impact-list">
+                <li>
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <circle cx="12" cy="12" r="10" fill="#eef3ff"/>
+                    <path d="M8 12l3 3 5-6" stroke="#0b3d91" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span>Reduces corruption and misuse of funds</span>
+                </li>
+                <li>
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <circle cx="12" cy="12" r="10" fill="#eef3ff"/>
+                    <path d="M8 12l3 3 5-6" stroke="#0b3d91" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span>Enables data-driven journalism and advocacy</span>
+                </li>
+                <li>
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <circle cx="12" cy="12" r="10" fill="#eef3ff"/>
+                    <path d="M8 12l3 3 5-6" stroke="#0b3d91" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span>Builds public trust in government institutions</span>
+                </li>
+              </ul>
+            </div>
+             <div class="impact-visual">
+               <div class="stat-card">
+                 <div class="stat-card-icon">📊</div>
+                 <div class="stat-card-value">₹143L Cr</div>
+                 <div class="stat-card-label">India's infrastructure spending (2024-2030) — CRISIL</div>
+               </div>
+               <div class="stat-card stat-card-accent">
+                 <div class="stat-card-icon">⚠️</div>
+                 <div class="stat-card-value">779</div>
+                 <div class="stat-card-label">Projects delayed (avg 36 months) in India — Ministry data</div>
+               </div>
+               <div class="stat-card">
+                 <div class="stat-card-icon">💰</div>
+                 <div class="stat-card-value">₹5L Cr</div>
+                 <div class="stat-card-label">Cost overruns in 449 Indian projects — Govt reports</div>
+               </div>
+             </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Audience Section -->
       <section class="audience section">
         <div class="container">
-          <h2 class="section-title">Built for everyone</h2>
+          <div class="section-header">
+            <span class="section-label">Who benefits</span>
+            <h2 class="section-title">Built for everyone</h2>
+          </div>
+
           <div class="audience-grid">
-            <article class="audience-card">
-              <h3>Citizens</h3>
-              <p>Follow local works and see what’s promised vs. delivered.</p>
-            </article>
-            <article class="audience-card">
-              <h3>Journalists</h3>
-              <p>Access reliable records for reporting, analysis, and oversight.</p>
-            </article>
-            <article class="audience-card">
-              <h3>Officials</h3>
-              <p>Monitor portfolios, timelines, and risks with an auditable trail.</p>
-            </article>
+            <div class="audience-card">
+              <div class="audience-icon">
+                <svg viewBox="0 0 48 48" fill="none">
+                  <circle cx="24" cy="16" r="8" stroke="#0b3d91" stroke-width="2.5"/>
+                  <path d="M8 40c0-8.837 7.163-16 16-16s16 7.163 16 16" stroke="#0b3d91" stroke-width="2.5" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <h3 class="audience-title">Citizens</h3>
+              <p class="audience-description">
+                See what projects are happening in your area, how funds are being spent, 
+                and whether promises match reality.
+              </p>
+            </div>
+
+            <div class="audience-card audience-card-featured">
+              <div class="audience-icon">
+                <svg viewBox="0 0 48 48" fill="none">
+                  <rect x="10" y="12" width="28" height="24" rx="2" stroke="#0b3d91" stroke-width="2.5"/>
+                  <path d="M16 20h16M16 26h12" stroke="#ffb81c" stroke-width="2.5" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <h3 class="audience-title">Journalists</h3>
+              <p class="audience-description">
+                Access verified, structured data for investigations, analysis, and reporting 
+                on infrastructure and governance.
+              </p>
+            </div>
+
+            <div class="audience-card">
+              <div class="audience-icon">
+                <svg viewBox="0 0 48 48" fill="none">
+                  <rect x="8" y="12" width="32" height="28" rx="2" stroke="#0b3d91" stroke-width="2.5"/>
+                  <circle cx="24" cy="22" r="4" stroke="#0b3d91" stroke-width="2.5"/>
+                  <path d="M16 32c0-4.418 3.582-8 8-8s8 3.582 8 8" stroke="#0b3d91" stroke-width="2.5" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <h3 class="audience-title">Officials</h3>
+              <p class="audience-description">
+                Monitor project portfolios, track risks and delays, and demonstrate 
+                accountability with auditable records.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
-      <section id="how-it-works" class="how section">
+      <!-- CTA Section -->
+      <section class="cta-section">
         <div class="container">
-          <h2 class="section-title">How it works</h2>
-          <ol class="steps">
-            <li>
-              <span class="step-title">Aggregate</span>
-              <p class="step-text">Ingest and normalize official data on projects, contracts, milestones, and payments.</p>
-            </li>
-            <li>
-              <span class="step-title">Anchor</span>
-              <p class="step-text">Compute content hashes and anchor them on-chain for a permanent audit trail.</p>
-            </li>
-            <li>
-              <span class="step-title">Verify</span>
-              <p class="step-text">Provide a clear public view with evidence, alerts, and an open API.</p>
-            </li>
-          </ol>
-        </div>
-      </section>
-
-      <section class="cta section">
-        <div class="container cta-inner">
-          <h2 class="cta-title">Shine light on public projects</h2>
-          <p class="cta-text">CivicLens helps citizens, journalists, and officials see what’s promised—and what’s delivered.</p>
-          <div class="hero-cta">
-            <a class="btn btn-primary" href="docs/Project-Brief.md">Read the brief</a>
-            <a class="btn btn-outline" href="README.md">View README</a>
+          <div class="cta-box">
+            <div class="cta-content">
+              <h2 class="cta-heading">Ready to bring transparency to your region?</h2>
+              <p class="cta-subheading">
+                CivicLens is under active development. Get in touch to learn more about 
+                the platform, contribute to the project, or discuss partnerships.
+              </p>
+            </div>
+             <div class="cta-actions">
+               <a href="mailto:contact@civiclens.site" class="btn btn-cta">
+                 <span>Get in touch</span>
+                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                   <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                 </svg>
+               </a>
+               <a href="docs/Project-Brief.md" class="btn btn-ghost">Read full brief</a>
+             </div>
           </div>
         </div>
       </section>
     </main>
 
     <footer class="site-footer" role="contentinfo" id="contact">
-      <div class="container footer-inner">
-        <div class="footer-brand">
-          <img class="brand-mark" src="assets/civiclens-mark.svg" alt="" width="24" height="24">
-          <span class="brand-text">CivicLens</span>
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <div class="footer-brand">
+              <img class="brand-mark" src="assets/civiclens-mark.svg" alt="" width="32" height="32">
+              <span class="brand-text">CivicLens</span>
+            </div>
+            <p class="footer-tagline">
+              Public infrastructure transparency powered by blockchain verification.
+            </p>
+          </div>
+
+          <div class="footer-col">
+            <h4 class="footer-heading">Resources</h4>
+            <ul class="footer-links">
+              <li><a href="docs/Project-Brief.md">Project Brief</a></li>
+              <li><a href="README.md">Documentation</a></li>
+              <li><a href="LICENSE">License (MIT)</a></li>
+            </ul>
+          </div>
+
+           <div class="footer-col">
+             <h4 class="footer-heading">Connect</h4>
+             <ul class="footer-links">
+               <li><a href="mailto:contact@civiclens.site">Email Us</a></li>
+               <li><a href="https://github.com/">GitHub</a></li>
+             </ul>
+           </div>
+
+           <div class="footer-col">
+             <h4 class="footer-heading">Project</h4>
+             <p class="footer-meta">
+               <strong>Developer:</strong><br>
+               Himavarshith Reddy<br>
+               <a href="mailto:contact@civiclens.site">contact@civiclens.site</a>
+             </p>
+             <p class="footer-meta">
+               Want to contribute?<br>
+               Please reach out via email.
+             </p>
+           </div>
         </div>
-        <div class="footer-meta">
-          <p>An open civic technology initiative for public infrastructure transparency.</p>
-          <p>Pre‑release: Not yet live. Follow updates in the documents below.</p>
-          <p>Developer: <strong>Himavarshith Reddy</strong> — <a href="mailto:himavarshithreddy@gmail.com">himavarshithreddy@gmail.com</a></p>
-          <p>Want to contribute? Please email <a href="mailto:himavarshithreddy@gmail.com">himavarshithreddy@gmail.com</a>.</p>
-          <p><a href="LICENSE">MIT License</a> • <a href="docs/Project-Brief.md">Project Brief</a></p>
+
+        <div class="footer-bottom">
+          <p>&copy; 2025 CivicLens. Open source under MIT License.</p>
+          <p>Pre-release version — Platform under active development.</p>
         </div>
       </div>
     </footer>
+    <script>
+      // Mobile Navigation Toggle
+      const navToggle = document.querySelector('.nav-toggle');
+      const siteNav = document.querySelector('.site-nav');
+      
+      if (navToggle && siteNav) {
+        navToggle.addEventListener('click', function() {
+          const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
+          navToggle.setAttribute('aria-expanded', !isExpanded);
+          siteNav.setAttribute('aria-expanded', !isExpanded);
+        });
+        
+        // Close menu when clicking on a link
+        const navLinks = siteNav.querySelectorAll('a');
+        navLinks.forEach(link => {
+          link.addEventListener('click', function() {
+            navToggle.setAttribute('aria-expanded', 'false');
+            siteNav.setAttribute('aria-expanded', 'false');
+          });
+        });
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+          if (!navToggle.contains(event.target) && !siteNav.contains(event.target)) {
+            navToggle.setAttribute('aria-expanded', 'false');
+            siteNav.setAttribute('aria-expanded', 'false');
+          }
+        });
+      }
+    </script>
   </body>
-  </html>
-
+</html>
